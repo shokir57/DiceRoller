@@ -7,15 +7,13 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvResult"
+    <ImageView
+        android:id="@+id/ivDiceImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvResult"
-        android:textSize="30sp"
         android:layout_gravity="center_horizontal"
+        android:src="@drawable/dice_1"
         />
-    
     <Button
         android:id="@+id/btnRoll"
         android:layout_width="wrap_content"

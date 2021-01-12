@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -23,8 +24,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val resultText : TextView = findViewById(R.id.tvResult)
         val randomInt = (1..6).random() // generates a random int (between 0 - 6)
-        resultText.text =randomInt.toString()
+
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+        val diceImage: ImageView = findViewById(R.id.ivDiceImage)
+        diceImage.setImageResource(drawableResource)
     }
 }
