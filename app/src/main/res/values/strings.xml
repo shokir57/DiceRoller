@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="tvResult">1</string>
+    <string name="btnText">Roll</string>
+</resources>
