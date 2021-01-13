@@ -10,6 +10,9 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
+
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             // Toast.makeText(this,"button clicked", Toast.LENGTH_SHORT).show()
             rollDice()
         }
-
+    diceImage = findViewById(R.id.ivDiceImage)
     }
 
     private fun rollDice() {
@@ -34,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        val diceImage: ImageView = findViewById(R.id.ivDiceImage)
+
         diceImage.setImageResource(drawableResource)
     }
 }
